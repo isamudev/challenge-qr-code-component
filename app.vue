@@ -3,14 +3,16 @@
     <div class="card">
       <img class="card__img" src="/img/qr-code.png" alt="QR Code" />
 
-      <h1 class="card__title">
-        Improve your front-end skills by building projects
-      </h1>
+      <div class="card__body">
+        <h1 class="card__title">
+          Improve your front-end skills by building projects
+        </h1>
 
-      <p class="card__description">
-        Scan the QR code to visit Frontend Mentor and take your coding skills to
-        the next level
-      </p>
+        <p class="card__description">
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </div>
     </div>
   </main>
 </template>
@@ -31,26 +33,31 @@ body {
 }
 
 main {
-  @apply flex items-center;
+  @apply flex items-center justify-center;
 }
 
 .card {
-  @apply mx-auto flex w-80 flex-col gap-4 rounded-2xl bg-white p-5 text-center;
+  @apply flex w-80 flex-col gap-6 rounded-2xl bg-white p-4 text-center;
 
   &__img {
     @apply rounded-xl;
   }
 
+  &__body {
+    @apply flex flex-col gap-4;
+  }
+
   &__title {
     color: hsl(218, 44%, 22%);
 
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold leading-7;
   }
 
   &__description {
     color: hsl(220, 15%, 55%);
+    font-size: 1.063rem;
 
-    @apply text-base font-normal;
+    @apply pb-5 font-normal leading-5;
   }
 }
 </style>
